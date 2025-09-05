@@ -1,0 +1,56 @@
+/*
+ * Wofi Configuration: style.css
+ *
+ * Instructions:
+ * 1. Save this file as "style.css"
+ * 2. Place it in your wofi config directory, typically "~/.config/wofi/"
+ * 3. Ensure your wofi command reads this stylesheet, e.g., wofi --show drun --style ~/.config/wofi/style.css
+ */
+
+/* Main window styling */
+window {
+    background-color: #000000; /* Pure black background */
+    border: 1px solid #333333; /* A subtle border to define the rectangle edge */
+    border-radius: 0;          /* Ensures the window is a sharp rectangle */
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px; /* Reduced font size */
+}
+
+/* Box containing all elements */
+#outer-box {
+    margin: 5px;
+    background-color: #000000;
+}
+
+/* Input bar styling */
+#input {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2px 8px; /* Added 2px padding, with extra horizontal padding for aesthetics */
+    border: none;
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+
+/* Styling for the list of entries */
+#scroll {
+    background-color: #000000;
+}
+
+/* Individual entry styling */
+#entry {
+    color: #ffffff;
+    padding: 2px 8px; /* Added 2px padding */
+    border-radius: 0;
+}
+
+/* Styling for the text within an entry */
+#text {
+    color: #ffffff;
+}
+
+/* Styling for the selected entry */
+#entry:selected {
+    background-color: #2a2a2a; /* A dark grey for selection to contrast with black */
+    color: #ffffff;
+}

@@ -1,0 +1,74 @@
+{
+    // General Waybar settings
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 4, // Reduced spacing for a more compact look
+    // Reference to the stylesheet for transparency and styling
+    "style": "./style.css",
+
+    // Module arrangement
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": [
+        "network",
+        "memory",
+        "battery",
+        "clock",
+    ],
+
+    // --- Module Configurations ---
+
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": []
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "active": "" // White dot for the active workspace
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 35 
+    },
+
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%A, %B %d, %Y}</big>"
+    },
+
+    "network": {
+        "format-wifi": "WIFI",
+        "format-ethernet": "ETH",
+        "format-disconnected": "NONE",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}: {signalStrength%}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "kitty -e iwctl"
+    },
+
+    "memory": {
+        "format": "MEM",
+        "tooltip": true,
+        "tooltip-format": "Memory: {percentage}% used",
+        "on-click": "kitty -e htop"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%", // This shows the percentage
+        "tooltip": true,
+        "tooltip-format": "{capacity}% ({time})"
+    }
+}
