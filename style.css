@@ -1,10 +1,12 @@
 /*
  * Wofi Configuration: style.css
- *
+ * wofi is the simple app launcher for Wayland
+ * This CSS file customizes the appearance of wofi to my liking
+ * This config needs JetBrainsMono Nerd Font installed to work properly
  * Instructions:
  * 1. Save this file as "style.css"
  * 2. Place it in your wofi config directory, typically "~/.config/wofi/"
- * 3. Ensure your wofi command reads this stylesheet, e.g., wofi --show drun --style ~/.config/wofi/style.css
+ * 3. Run wofi with the command: wofi --show drun --style ~/.config/wofi/style.css
  */
 
 /* Main window styling */
@@ -13,7 +15,7 @@ window {
     border: 1px solid #333333; /* A subtle border to define the rectangle edge */
     border-radius: 0;          /* Ensures the window is a sharp rectangle */
     font-family: "JetBrainsMono Nerd Font", monospace;
-    font-size: 12px; /* Reduced font size */
+    font-size: 12px; 
 }
 
 /* Box containing all elements */
@@ -26,7 +28,7 @@ window {
 #input {
     background-color: #000000;
     color: #ffffff;
-    padding: 2px 8px; /* Added 2px padding, with extra horizontal padding for aesthetics */
+    padding: 2px 8px; 
     border: none;
     border-radius: 0;
     margin-bottom: 5px;
@@ -40,7 +42,7 @@ window {
 /* Individual entry styling */
 #entry {
     color: #ffffff;
-    padding: 2px 8px; /* Added 2px padding */
+    padding: 2px 8px; 
     border-radius: 0;
 }
 

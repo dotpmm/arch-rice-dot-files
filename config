@@ -1,13 +1,10 @@
 {
-    // General Waybar settings
     "layer": "top",
     "position": "top",
     "height": 28,
-    "spacing": 4, // Reduced spacing for a more compact look
-    // Reference to the stylesheet for transparency and styling
+    "spacing": 4, 
     "style": "./style.css",
 
-    // Module arrangement
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
     "modules-right": [
@@ -50,16 +47,16 @@
         "format-ethernet": "ETH",
         "format-disconnected": "NONE",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ifname}: {signalStrength%}",
+        "tooltip-format-ethernet": "{ifname}: {signalStrength%}", // Tells about the distance from the router
         "tooltip-format-disconnected": "Disconnected",
-        "on-click": "kitty -e iwctl"
+        "on-click": "kitty -e iwctl" // Can also use nmtui or nmcli
     },
 
     "memory": {
         "format": "MEM",
         "tooltip": true,
         "tooltip-format": "Memory: {percentage}% used",
-        "on-click": "kitty -e htop"
+        "on-click": "kitty -e htop" 
     },
 
     "battery": {
@@ -67,7 +64,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}%", // This shows the percentage
+        "format": "{capacity}%",
         "tooltip": true,
         "tooltip-format": "{capacity}% ({time})"
     }
